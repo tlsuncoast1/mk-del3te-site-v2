@@ -48,7 +48,6 @@ html, body { height: 100%; background: #000; }
     0 0 45px #ff00ff;
   background: rgba(0,255,255,0.2);
 }
-}
 .hotspot:hover {
   border-color: rgba(0,255,255,.72);
   background: rgba(255,0,220,.14);
