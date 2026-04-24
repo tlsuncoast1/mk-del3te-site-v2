@@ -48,17 +48,34 @@ html, body { height: 100%; background: #000; }
     0 0 45px #ff00ff;
   background: rgba(0,255,255,0.2);
 }
-.hotspot:hover {
-  border-color: rgba(0,255,255,.72);
-  background: rgba(255,0,220,.14);
-  box-shadow: 0 0 20px rgba(255,0,220,.48), inset 0 0 18px rgba(0,255,255,.20);
-  filter: brightness(1.2);
+.hotspot {
+  cursor: pointer;
+  border: 1px solid rgba(0,255,255,.35);
+  background: rgba(0,0,0,.02);
+  transition: all .18s ease;
+  position: absolute;
+  overflow: hidden;
 }
+
+.hotspot:hover {
+  border-color: rgba(0,255,255,.95);
+  background: rgba(255,0,220,.06);
+  box-shadow:
+    0 0 10px rgba(0,255,255,.8),
+    0 0 22px rgba(255,0,220,.45),
+    inset 0 0 12px rgba(0,255,255,.18);
+  transform: scale(1.025);
+  filter: brightness(1.15);
+}
+
 .hotspot:active {
   transform: scale(.96);
-  border-color: rgba(255,255,255,.95);
-  background: rgba(0,255,255,.18);
-  box-shadow: 0 0 28px rgba(0,255,255,.72), 0 0 38px rgba(255,0,220,.50), inset 0 0 22px rgba(255,255,255,.28);
+  background: rgba(0,255,255,.16);
+  box-shadow:
+    0 0 20px rgba(0,255,255,.95),
+    0 0 34px rgba(255,0,220,.7),
+    inset 0 0 18px rgba(255,255,255,.28);
+}
 }
 .glitch-layer { filter: saturate(1.35) contrast(1.08); animation-duration: 2.8s; animation-iteration-count: infinite; animation-timing-function: steps(2, end); }
 .glitch-cyan { clip-path: polygon(0 9%,100% 9%,100% 16%,0 16%,0 34%,100% 34%,100% 39%,0 39%,0 71%,100% 71%,100% 77%,0 77%); filter: hue-rotate(155deg) saturate(1.6) brightness(1.14); animation-name: glitchCyan; }
